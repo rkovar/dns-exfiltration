@@ -1,6 +1,7 @@
 import socket
 import base64
 import struct
+import sys
 """ Break a large file into small 8 byte chunks
 Sequence the chunks, pack and b64 encode them
 Then send DNS queries """
@@ -34,4 +35,4 @@ def break_file(filename):
         print e
 
 # Run Program
-break_file('test.txt')
+break_file(sys.argv[0])
